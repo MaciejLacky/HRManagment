@@ -1,0 +1,441 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E63B8BD8-3756-4E97-9B3F-647666381844}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SystemHR.UserInterface</RootNamespace>
+    <AssemblyName>SystemHR</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\ContractEventArgs.cs" />
+    <Compile Include="Classes\DepartmentsEventArgs.cs" />
+    <Compile Include="Classes\EmployeeEventArgs.cs" />
+    <Compile Include="Classes\PositionsEventArgs.cs" />
+    <Compile Include="Extensions\ExtensionsMethod.cs" />
+    <Compile Include="Forms\Contracts\Base\BaseAddViewContract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Contracts\Base\BaseAddViewContract.Designer.cs">
+      <DependentUpon>BaseAddViewContract.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Contracts\ContractAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Contracts\ContractAddForm.Designer.cs">
+      <DependentUpon>ContractAddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Contracts\ContractsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Contracts\ContractsForm.Designer.cs">
+      <DependentUpon>ContractsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Contracts\ContractViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Contracts\ContractViewForm.Designer.cs">
+      <DependentUpon>ContractViewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Departments\Base\BaseAddModifyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Departments\Base\BaseAddModifyForm.Designer.cs">
+      <DependentUpon>BaseAddModifyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Departments\Base\BaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Departments\Base\BaseForm.Designer.cs">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Departments\DepartmentAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Departments\DepartmentAddForm.Designer.cs">
+      <DependentUpon>DepartmentAddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Departments\DepartmentModifyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Departments\DepartmentModifyForm.Designer.cs">
+      <DependentUpon>DepartmentModifyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Departments\DepartmentsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Departments\DepartmentsForm.Designer.cs">
+      <DependentUpon>DepartmentsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EmailConfig\EmailConfigForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EmailConfig\EmailConfigForm.Designer.cs">
+      <DependentUpon>EmailConfigForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Employees\Base\BaseAddEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Employees\Base\BaseAddEditForm.Designer.cs">
+      <DependentUpon>BaseAddEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Employees\Base\BaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Employees\Base\BaseForm.Designer.cs">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Employees\EmployeeAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Employees\EmployeeAddForm.Designer.cs">
+      <DependentUpon>EmployeeAddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Employees\EmployeeEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Employees\EmployeeEditForm.Designer.cs">
+      <DependentUpon>EmployeeEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Employees\EmployeeFiredForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Employees\EmployeeFiredForm.Designer.cs">
+      <DependentUpon>EmployeeFiredForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Employees\EmployeeSendEmailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Employees\EmployeeSendEmailForm.Designer.cs">
+      <DependentUpon>EmployeeSendEmailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Employees\EmployeesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Employees\EmployeesForm.Designer.cs">
+      <DependentUpon>EmployeesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\OrganizationalStructure\OrganizationalStructureForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\OrganizationalStructure\OrganizationalStructureForm.Designer.cs">
+      <DependentUpon>OrganizationalStructureForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Positions\Base\BaseAddModifyPositions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Positions\Base\BaseAddModifyPositions.Designer.cs">
+      <DependentUpon>BaseAddModifyPositions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Positions\Base\BaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Positions\Base\BaseForm.Designer.cs">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Positions\PositionAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Positions\PositionAddForm.Designer.cs">
+      <DependentUpon>PositionAddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Positions\PositionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Positions\PositionForm.Designer.cs">
+      <DependentUpon>PositionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Positions\PositionModifyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Positions\PositionModifyForm.Designer.cs">
+      <DependentUpon>PositionModifyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Salaries\SalariesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Salaries\SalariesForm.Designer.cs">
+      <DependentUpon>SalariesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Users\Base\BaseAddModifyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Users\Base\BaseAddModifyForm.Designer.cs">
+      <DependentUpon>BaseAddModifyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Users\Base\BaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Users\Base\BaseForm.Designer.cs">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Users\UserAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Users\UserAddForm.Designer.cs">
+      <DependentUpon>UserAddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Users\UserModifyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Users\UserModifyForm.Designer.cs">
+      <DependentUpon>UserModifyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Users\UsersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Users\UsersForm.Designer.cs">
+      <DependentUpon>UsersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\MappingHelper.cs" />
+    <Compile Include="Helpers\ResourcesHelper.cs" />
+    <Compile Include="Helpers\ValidatorsHelper.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\Contracts\Base\BaseAddViewContract.resx">
+      <DependentUpon>BaseAddViewContract.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Contracts\ContractAddForm.resx">
+      <DependentUpon>ContractAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Contracts\ContractsForm.resx">
+      <DependentUpon>ContractsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Contracts\ContractViewForm.resx">
+      <DependentUpon>ContractViewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Departments\Base\BaseForm.resx">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Departments\DepartmentAddForm.resx">
+      <DependentUpon>DepartmentAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Departments\DepartmentModifyForm.resx">
+      <DependentUpon>DepartmentModifyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Departments\DepartmentsForm.resx">
+      <DependentUpon>DepartmentsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EmailConfig\EmailConfigForm.resx">
+      <DependentUpon>EmailConfigForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Employees\Base\BaseAddEditForm.resx">
+      <DependentUpon>BaseAddEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Employees\Base\BaseForm.resx">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Employees\EmployeeAddForm.resx">
+      <DependentUpon>EmployeeAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Employees\EmployeeEditForm.resx">
+      <DependentUpon>EmployeeEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Employees\EmployeeFiredForm.resx">
+      <DependentUpon>EmployeeFiredForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Employees\EmployeeSendEmailForm.resx">
+      <DependentUpon>EmployeeSendEmailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Employees\EmployeesForm.resx">
+      <DependentUpon>EmployeesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OrganizationalStructure\OrganizationalStructureForm.resx">
+      <DependentUpon>OrganizationalStructureForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Positions\Base\BaseAddModifyPositions.resx">
+      <DependentUpon>BaseAddModifyPositions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Positions\Base\BaseForm.resx">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Positions\PositionAddForm.resx">
+      <DependentUpon>PositionAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Positions\PositionForm.resx">
+      <DependentUpon>PositionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Positions\PositionModifyForm.resx">
+      <DependentUpon>PositionModifyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Salaries\SalariesForm.resx">
+      <DependentUpon>SalariesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Users\Base\BaseAddModifyForm.resx">
+      <DependentUpon>BaseAddModifyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Users\UserAddForm.resx">
+      <DependentUpon>UserAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Users\UsersForm.resx">
+      <DependentUpon>UsersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\DataSources\SystemHR.DataAccessLayer.Models.ContractsModel.datasource" />
+    <None Include="Properties\DataSources\SystemHR.DataAccessLayer.Models.Dictionaries.CurrencyModel.datasource" />
+    <None Include="Properties\DataSources\SystemHR.DataAccessLayer.Models.Dictionaries.GenderModel.datasource" />
+    <None Include="Properties\DataSources\SystemHR.DataAccessLayer.Models.Dictionaries.TerminationWayModel.datasource" />
+    <None Include="Properties\DataSources\SystemHR.DataAccessLayer.Models.Dictionaries.TypeContractModel.datasource" />
+    <None Include="Properties\DataSources\SystemHR.DataAccessLayer.Models.Dictionaries.TypeRateModel.datasource" />
+    <None Include="Properties\DataSources\SystemHR.DataAccessLayer.Models.EmployeeModel.datasource" />
+    <None Include="Properties\DataSources\SystemHR.DataAccessLayer.ViewModels.ContractViewModel.datasource" />
+    <None Include="Properties\DataSources\SystemHR.DataAccessLayer.ViewModels.DepartmentViewModel.datasource" />
+    <None Include="Properties\DataSources\SystemHR.DataAccessLayer.ViewModels.EmployeeViewModel.datasource" />
+    <None Include="Properties\DataSources\SystemHR.DataAccessLayer.ViewModels.OrganizationalStructureModel.datasource" />
+    <None Include="Properties\DataSources\SystemHR.DataAccessLayer.ViewModels.PositionViewModel.datasource" />
+    <None Include="Properties\DataSources\SystemHR.DataAccessLayer.ViewModels.SalaryViewModel.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj">
+      <Project>{eec61e2e-62e5-4645-b828-e938f0cb740f}</Project>
+      <Name>DataAccessLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\employee_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Emplyees_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Contracts_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OrganizationalUnits_32.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Salary_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Departments_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Positions_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Database_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dismiss_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\email_24.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_241.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\return.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\return1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\email %281%29.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\paper.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
